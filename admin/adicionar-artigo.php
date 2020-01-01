@@ -2,6 +2,7 @@
 
 require_once '../config.php';
 require_once '../src/Artigo.php';
+require_once '../src/redireciona.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -9,10 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $artigo->adicionar($_POST['titulo'], $_POST['conteudo']);
 
 
-    //redirecionar
-    header('Location: adicionar-artigo.php');
-    die();
-}
+    redireciona('/blog/admin/index.php');
 
 
 ?>
