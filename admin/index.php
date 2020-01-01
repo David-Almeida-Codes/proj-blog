@@ -1,3 +1,15 @@
+<?php
+
+    require_once '../config.php';
+    require_once '../src/Artigo.php';
+
+    $artigo = new Artigo($mysql);
+    
+    $artigos = $artigo->exibirTodos();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -33,7 +45,7 @@
                 </nav>
             </div>
         </div>
-        <a class="botao botao-block" href="admin/adicionar-artigo.html">Adicionar Artigo</a>
+        <a class="botao botao-block" href="adicionar-artigo.php">Adicionar Artigo</a>
     </div>
 </body>
 
